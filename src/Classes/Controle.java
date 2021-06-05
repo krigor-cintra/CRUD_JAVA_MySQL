@@ -25,6 +25,7 @@ public class Controle {
         estado=sc.nextLine();
         aluno.setEstado(estado);
 
+        
         alunoDAO.save(aluno);
         
         cad_telefone(alunoDAO.last_ID());
