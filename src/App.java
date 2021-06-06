@@ -15,8 +15,5 @@ public class App {
         //controle.ultimo_id();
        //controle.atualizar_aluno();//atualiza
 
-    
-
-
     }
 }

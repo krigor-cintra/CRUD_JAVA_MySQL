@@ -25,7 +25,7 @@ public class Controle {
         estado=sc.nextLine();
         aluno.setEstado(estado);
 
-        
+
         alunoDAO.save(aluno);
         
         cad_telefone(alunoDAO.last_ID());
@@ -56,6 +56,7 @@ public class Controle {
         }
         
     }
+ 
     //dados dos alunos + o telefone da criatura
     public void dados_aluno() throws Exception{
         alunoDAO alunoDAO = new alunoDAO();
@@ -65,6 +66,7 @@ public class Controle {
             telef(aluno.getIdaluno());
         }
     }
+ 
     //atualizar cadastro de aluno
     public void atualizar_aluno() throws Exception{
         alunoDAO alunoDAO = new alunoDAO();
@@ -85,6 +87,7 @@ public class Controle {
         
         alunoDAO.update_aluno(aluno);
     }
+   
     //apagar a criatura do banco de dados
     public void apagar_aluno() throws Exception{
 
@@ -92,6 +95,7 @@ public class Controle {
         idaluno=sc.nextInt();
         alunoDAO.deletar_aluno(idaluno);
     }
+  
     //exibir telefone dos alunos pede o id
     public void exibir_telefones_aluno() throws Exception{
         System.out.println("Digite o idaluno: ");
@@ -103,6 +107,7 @@ public class Controle {
         }
 
     }
+   
     //exibir telefone usado no dados do aluno 
     public void telef(int idaluno) throws Exception{
        
@@ -113,11 +118,11 @@ public class Controle {
         }
         System.out.println("\n");
     }
+  
     // retornar o ultimo id 
     public void ultimo_id(){
         alunoDAO.last_ID();
         System.out.println(alunoDAO.last_ID());
     }
-
 
 }

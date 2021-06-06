@@ -200,7 +200,6 @@ public class alunoDAO {
     }
 
 
-
     public List<telefone> gettelefone(int Idaluno) throws Exception{
 
         String sql ="SELECT * FROM telefone WHERE idaluno IN (?)";
