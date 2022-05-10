@@ -17,6 +17,7 @@ public class Controle {
       
         System.out.println("Digite o nome do aluno: ");
         nome=sc.nextLine();
+        
         aluno.setNome(nome);
         System.out.println("Digite a Cidade: ");
         cidade=sc.nextLine();
@@ -43,7 +44,7 @@ public class Controle {
             numero=sc.next();
 
             if(numero.equals("0")){
-                sc.close();
+                
                 break;
             }
             
@@ -124,5 +125,34 @@ public class Controle {
         alunoDAO.last_ID();
         System.out.println(alunoDAO.last_ID());
     }
+
+    //cadastrar telefone_Solicita o ID do aluno
+    public void cad_telefone(){
+        
+        telefone telefone = new telefone();
+        System.out.println("Cadastro de telefone do Aluno"+"\n Caso não queiraca cadastrar digite 0.");
+     
+        idaluno=sc.nextInt();
+        telefone.setIdaluno(idaluno);
+        for(int cont=0;cont<=2;cont++){
+            System.out.println("Digite o numero do aluno: ");
+            numero=sc.next();
+
+            if(numero.equals("0")){
+                
+                break;
+            }
+            
+                telefone.setNumero(numero);
+                
+                alunoDAO.savetelefone(telefone);
+            
+            
+            
+        }
+        
+    }
+ 
+    
 
 }
